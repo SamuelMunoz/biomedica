@@ -22,6 +22,7 @@ public class loginForm extends javax.swing.JFrame {
     public loginForm() {
         initComponents();
         this.setLocationRelativeTo(null);
+        this.setResizable(false);
     }
 
     /**

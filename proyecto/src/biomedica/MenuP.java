@@ -17,6 +17,7 @@ public class MenuP extends javax.swing.JFrame {
     public MenuP() {
         initComponents();
         this.setLocationRelativeTo(null);
+        this.setResizable(false);
     }
 
     /**
@@ -39,14 +40,29 @@ public class MenuP extends javax.swing.JFrame {
         btnConsultaEquipo.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         btnConsultaEquipo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/biomedica/images/archivo.png"))); // NOI18N
         btnConsultaEquipo.setText("Consumibles");
+        btnConsultaEquipo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConsultaEquipoActionPerformed(evt);
+            }
+        });
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/biomedica/images/cama.png"))); // NOI18N
         jButton1.setText("Equipo Médico");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/biomedica/images/capacitacion.png"))); // NOI18N
         jButton2.setText("Capacitaciones");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -74,6 +90,24 @@ public class MenuP extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        EquipoMedicoForm eq = new EquipoMedicoForm();
+        eq.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void btnConsultaEquipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultaEquipoActionPerformed
+        // TODO add your handling code here:
+        ConsumiblesForm con = new ConsumiblesForm();
+        con.setVisible(true);
+    }//GEN-LAST:event_btnConsultaEquipoActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        CapacitacionForm cap = new CapacitacionForm();
+        cap.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
